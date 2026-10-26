@@ -1,0 +1,69 @@
+{
+  "name": "dsh-bark-notify",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Push a Bark notification to your phones when a conversation turn finishes or a background job settles, configurable from Settings.",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lloydly007/dsh-bark-notify.git"
+  },
+  "homepage": "https://github.com/Lloydly007/dsh-bark-notify#readme",
+  "bugs": {
+    "url": "https://github.com/Lloydly007/dsh-bark-notify/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "bark",
+    "notifications",
+    "plugin"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  },
+  "meta": {
+    "title": "Bark 通知",
+    "description": "对话回合结束或后台任务结束时推送到 Bark；设备、内容、重试、归档等参数都能在设置里改。"
+  }
+}

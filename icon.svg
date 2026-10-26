@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bark notification bell">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#f5a623"/>
+  <path d="M32 14a11 11 0 0 0-11 11v9l-4 6v3h30v-3l-4-6v-9a11 11 0 0 0-11-11z" fill="#ffffff"/>
+  <path d="M28 46a4 4 0 0 0 8 0z" fill="#ffffff"/>
+</svg>

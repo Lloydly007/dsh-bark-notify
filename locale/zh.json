@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Bark 通知",
+    "description": "对话回合结束或后台任务结束时推送到 Bark。"
+  }
+}

@@ -1,0 +1,12 @@
+# Profile bundle patch: one Host row that pushes Bark cards on turn completion,
+# plus the client half that renders its form in Settings → Plugins.
+#
+# No device key ships here: add your own in Settings → Plugins → Bark 通知.
+# Writes from that page land in the profile patch layer, above this one.
+- insert:
+    - id: bark-notify
+      name: dsh-bark-notify
+      config:
+        server: https://api.day.app
+        deviceKeys: []
+        trace: false
